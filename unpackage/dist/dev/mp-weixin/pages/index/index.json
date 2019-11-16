@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "usingComponents": {
+    "headers": "/pages/index/header",
+    "title-info": "/pages/index/titleinfo"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="title-img  bg-white"><image class="title" src="{{url}}" mode="widthFix"></image></view>

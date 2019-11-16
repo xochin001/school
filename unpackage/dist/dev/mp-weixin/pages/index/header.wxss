@@ -1,0 +1,48 @@
+
+.navbg{
+	height: 399rpx;
+	width: 100vw;
+	background-image: url("http://q0w0nmycu.bkt.clouddn.com/%E8%83%8C%E6%99%AF@3x.png");
+	background-size: cover;
+	position: absolute;
+}
+.logo-title{
+	position: relative;
+	top:80rpx;
+	left:10rpx;
+}
+.logo{
+	width: 356rpx;
+	height: 48rpx;
+}
+.music-view{
+	width: 56rpx;
+	height: 56rpx;
+	 position: relative;
+	 top:260rpx;
+	left: 26rpx;
+}
+.music-btn{
+	width: 100%;
+	height: 100%;
+}
+.word-view{
+	position: relative;
+	top:40rpx;
+	left:592rpx;
+}
+.word-left{
+	width:24rpx;
+	height: 400rpx;
+	position: absolute;
+	top:5rpx;
+	left: 0;
+}
+.word-right{
+	width:24rpx;
+	height: 400rpx;
+	position: absolute;
+	top: 30rpx;
+	margin-left:60rpx;
+}
+

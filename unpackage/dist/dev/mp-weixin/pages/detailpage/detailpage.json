@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "skele-ton": "/components/tui-skeleton/tui-skeleton",
+    "sub-banner": "/pages/component/content-banner"
+  }
+}

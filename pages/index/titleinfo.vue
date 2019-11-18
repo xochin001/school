@@ -8,8 +8,16 @@
 	export default{
 		data(){
 			return{
-				url:'/static/title.png'
+				url:'',
 			}
+		},
+		methods:{
+			async defaultset(){
+				this.url = await this.$api.base('hometitle')
+			}
+		},
+		mounted(){
+			this.defaultset()
 		}
 	}
 </script>

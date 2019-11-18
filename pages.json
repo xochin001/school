@@ -3,16 +3,23 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "广州白云工商技师学院"
 			}
 		}
-
-	],
+        ,{
+            "path" : "pages/subhome/subhome",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/detailpage/detailpage",
+            "style" : {}
+        }
+    ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "广州白云工商技师学院",
 		"navigationStyle": "custom",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#B01C11",
 		"backgroundColor": "#F8F8F8"
 	},
 		"usingComponts": true

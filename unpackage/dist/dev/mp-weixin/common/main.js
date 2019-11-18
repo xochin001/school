@@ -10,11 +10,21 @@
 /* WEBPACK VAR INJECTION */(function(createApp) {__webpack_require__(/*! uni-pages */ 4);__webpack_require__(/*! @dcloudio/uni-stat */ 5);
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
 var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 9));
-var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/store/index */ 15));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}
-_vue.default.config.productionTip = false;
+var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/store/index */ 15));
 
+var _baseinfo = _interopRequireDefault(__webpack_require__(/*! ./baseinfo */ 18));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}_vue.default.config.productionTip = false;
+var base = function base(type) {
+  return new Promise(function (resolve) {
+    resolve(_baseinfo.default[type]);
+  });
+};var Loading = function Loading() {return __webpack_require__.e(/*! import() | components/loading/loading */ "components/loading/loading").then(__webpack_require__.bind(null, /*! @/components/loading/loading */ 46));};
+
+_vue.default.component('Loading', Loading);
 _App.default.mpType = 'app';
 _vue.default.prototype.$store = _index.default;
+
+_vue.default.prototype.$api = { base: base };
+
 var app = new _vue.default(_objectSpread({},
 _App.default));
 

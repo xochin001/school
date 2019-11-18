@@ -104,11 +104,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"pages/index/header":1,"pages/index/titleinfo":1};
+/******/ 		var cssChunks = {"components/tui-skeleton/tui-skeleton":1,"pages/component/swper-banner":1,"pages/index/header":1,"pages/index/titleinfo":1,"pages/component/content-banner":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"pages/index/header":"pages/index/header","pages/index/titleinfo":"pages/index/titleinfo"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/loading/loading":"components/loading/loading","components/tui-skeleton/tui-skeleton":"components/tui-skeleton/tui-skeleton","pages/component/swper-banner":"pages/component/swper-banner","pages/index/header":"pages/index/header","pages/index/titleinfo":"pages/index/titleinfo","pages/component/content-banner":"pages/component/content-banner"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

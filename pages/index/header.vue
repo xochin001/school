@@ -1,14 +1,14 @@
 <template>
-		<view class="navbg">
+		<view class="navbg" :style="'background-image:url('+navbg+')'">
 			<view class="logo-title">
-				<image :src="info.logo" mode="widthFix" class="logo "></image>
+				<image :src="infos.logo" mode="widthFix" class="logo "></image>
 			</view>
 			<view class="music-view">
-				<image :src="info.music" mode="widthFix" class="music-btn"></image>
+				<image :src="infos.music" mode="widthFix" class="music-btn"></image>
 			</view>
 			<view class="word-view">
-				<image :src="info.wordleft" mode="widthFix" class="word-left "></image>
-					<image :src="info.wordright" mode="widthFix" class="word-right"></image>
+				<image :src="infos.wordleft" mode="widthFix" class="word-left "></image>
+					<image :src="infos.wordright" mode="widthFix" class="word-right"></image>
 			</view>
 		</view>
 </template>
@@ -19,8 +19,20 @@
 		props: {
 			info:Object,
 		},
+		watch:{
+			info(val){
+				this.infos = val
+				this.navbg = this.infos.navbg
+			}
+		},
 		created() {
-			
+
+		},
+		data(){
+			return{
+				infos:{},
+				navbg:'',
+			}
 		}
 		
 	}
@@ -30,7 +42,6 @@
 	.navbg{
 		height: 399upx;
 		width: 100vw;
-		background-image: url("http://q0w0nmycu.bkt.clouddn.com/%E8%83%8C%E6%99%AF@3x.png");
 		background-size: cover;
 		position: absolute;
 	}
@@ -56,7 +67,7 @@
 	}
 	.word-view{
 		position: relative;
-		top:40upx;
+		top:30upx;
 		left:592upx;
 	}
 	.word-left{

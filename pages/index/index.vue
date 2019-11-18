@@ -1,94 +1,64 @@
 <template>
-	<view >
-		<headers  :info="infos"/>
-		<view class="content ">
-			<title-Info />
-				<view class="banner-content ">
-					<swiper class="card-swiper " :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true" :circular="true"
-					 :autoplay="true" interval="5000" duration="500" @change="cardSwiper" indicator-color="#8799a3"
-					 indicator-active-color="#B01C11">
-						<swiper-item v-for="(item,index) in swiperList" :key="index" :class="cardCur==index?'cur padding-sm':''">
-							<view class="swiper-item">
-									<image :src="item.url" mode="aspectFill"></image>
-								<view class="infomation bg-white">
-									<view class="menu-title">
-										<view class="title text-xxl text-bold">
-											{{item.title}}
-										</view>
-										<view class="sub-title text-lg text-bold margin-tb-sm">
-											{{item.subtitle}}
-										</view>
-									</view>
-									<view class="go-btn">
-										<text class="cuIcon-back_android text-bold" style=" transform: rotateY(180deg); " ></text>
-									</view>
-								</view>
-							</view>
-						</swiper-item>
-					</swiper>
+	<view class="page ">
+		<skele-ton v-if="skeletonShow" backgroundColor="#fafafa" borderRadius="10rpx"></skele-ton>
+			<headers  :info="infos"/>
+			<view class="content tui-skeleton">
+				<title-Info />
+					<view class="banner-content tui-skeleton-rect">
+					<swper-banner :List="swiperList" />
+					</view>
+				<view class="footer-content tui-skeleton-rect" :style="'background-image: url('+footbg+');background-size:cover'" >
+					<image :src="foot.foottitle"  class="fooimg"></image>
 				</view>
-			<view class="footer-content" :style="'background-image: url('+footurl+');background-size:cover'" >
-				<image :src="footimg"  class="fooimg"></image>
-
 			</view>
-		</view>
+		<Loading  ref="loading"/>
 	</view>
 </template>
 
 <script>
 	import headers from './header'
 	import titleInfo from './titleinfo'
+	import swperBanner from '@/pages/component/swper-banner'
+	import skeleTon from '@/components/tui-skeleton/tui-skeleton'
+	import {get }from '@/pages/utils/request'
 	export default {
 		components:{
 			headers,
-			titleInfo
+			titleInfo,
+			swperBanner,
+			skeleTon,
 		},
 		data() {
 			return {
-				infos:{
-					logo:'/static/logo.png',
-					music:'/static/music-btn.png',
-					wordleft:'/static/wordleft.png',
-					wordright:'/static/wordright.png',
-				},
-				dotStyle: false,
-				cardCur:0,
-				swiperList:[{
-					id:0,
-					title:'学校篇',
-					subtitle:'巍巍学府，源远流长',
-					url:'/static/test1.png'
-				},{
-					id:1,
-					title:'学校篇',
-					subtitle:'巍巍学府，源远流长',
-					url:'/static/test1.png'
-				},{
-					id:2,
-					title:'学校篇',
-					subtitle:'巍巍学府，源远流长',
-					url:'/static/test1.png'
-				}],
-				footurl:'/static/footerbg.png',
-				footimg:'/static/footitle.png',
+				infos:{},
+				swiperList:[],
+				foot:{},
+				footbg:'',
+				skeletonShow:true,
 			}
 		},
-		onLoad() {
-
+		mounted() {
+			this.defaultSet()
 		},
 		methods: {
-			DotStyle(e) {
-				this.dotStyle = e.detail.value
-			},
-			// cardSwiper
-			cardSwiper(e) {
-				this.cardCur = e.detail.current
-			},
+			async defaultSet(){
+				this.$refs.loading.open()
+				this.infos = await this.$api.base('homeheader')
+				const swiperList = await get('/api/30/showbanner')
+				this.swiperList = swiperList.res
+				this.foot = await this.$api.base('foot')
+				this.footbg = this.foot.footbg
+				this.skeletonShow = false
+				 this.$refs.loading.close()
+			}
 		}
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+	.page{
+		height: 100vh;
+	}
 	.content{
 		position: absolute;
 		top:400upx;
@@ -99,43 +69,10 @@
 		width: 100vw;
 		background: #F7F7F7;
 	}
-	.images{
-		width: 606upx;
-		height: 440upx;
-		overflow: hidden;
-	}
-	.infomation {
-		height: 34%;
-		width: 100%;
-		display: flex;
-		align-items: center;
-		
-	}
-	.menu-title {
-		height: 90upx;
-		flex-basis: 80%;
-		.title{
-			margin-left: 42upx;
-			color:#B01C11;
-		}
-		.sub-title{
-			margin-left:42upx;
-			color: #A1A1A1;
-			letter-spacing: 2upx;
-		}
-	}
-	.go-btn {
-		height: 90upx;
-		flex-basis: 20%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color:#B01C11;
-		font-size: 38upx;
-	}
+	
 	.footer-content{
 		width: 100vw;
-		height: 80upx;
+		height: 110upx;
 		display: flex;
 		justify-content: center;
 		align-items: center;

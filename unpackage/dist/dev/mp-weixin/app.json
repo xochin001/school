@@ -1,15 +1,19 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/subhome/subhome",
+    "pages/detailpage/detailpage"
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "广州白云工商技师学院",
     "navigationStyle": "custom",
-    "navigationBarBackgroundColor": "#F8F8F8",
+    "navigationBarBackgroundColor": "#B01C11",
     "backgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap59.json"
+  "usingComponents": {
+    "loading": "/components/loading/loading"
+  },
+  "sitemapLocation": "sitemap22.json"
 }

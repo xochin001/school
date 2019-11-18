@@ -16,6 +16,10 @@ page {
 	color: #333333;
 	font-family: Helvetica Neue, Helvetica, sans-serif;
 }
+.swper-content{
+	position: relative;
+	top:399rpx;
+}
 view,
 scroll-view,
 swiper,
@@ -2609,14 +2613,15 @@ swiper.square-dot .uni-swiper-dot {
 	opacity: 0.4;
 	width: 10rpx;
 	height: 10rpx;
-	border-radius: 20rpx;
+	border-radius: 2rpx;
 	margin: 0 8rpx !important;
 }
 swiper.square-dot .wx-swiper-dot.wx-swiper-dot-active,
 swiper.square-dot .a-swiper-dot.a-swiper-dot-active,
 swiper.square-dot .uni-swiper-dot.uni-swiper-dot-active {
 	opacity: 1;
-	width: 30rpx;
+	width: 32rpx;
+	height: 6rpx;
 }
 swiper.round-dot .wx-swiper-dot,
 swiper.round-dot .a-swiper-dot,
@@ -2640,7 +2645,7 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active::after {
 	bottom: 0;
 	margin: auto;
 	/* background-color: #ffffff; */
-	border-radius: 20rpx;
+	border-radius: 10rpx;
 }
 swiper.round-dot .wx-swiper-dot.wx-swiper-dot-active,
 swiper.round-dot .a-swiper-dot.a-swiper-dot-active,
@@ -2698,6 +2703,42 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 	-o-transition: all 0.2s ease-in 0s;
 	transition: all 0.2s ease-in 0s;
 }
+
+/* ================================ */
+.subcard-swiper {
+	height: 420rpx !important;
+}
+.subcard-swiper swiper-item {
+	width: 610rpx !important;
+	left: 70rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	padding: 40rpx 0rpx 70rpx;
+	overflow: initial;
+}
+.subcard-swiper swiper-item .swiper-item {
+	width: 100%;
+	display: block;
+	height: 100%;
+	border-radius: 10rpx;
+	-webkit-transform: scale(0.9);
+	    -ms-transform: scale(0.9);
+	        transform: scale(0.9);
+	-webkit-transition: all 0.2s ease-in 0s;
+	-o-transition: all 0.2s ease-in 0s;
+	transition: all 0.2s ease-in 0s;
+	overflow: hidden;
+}
+.subcard-swiper swiper-item.cur .swiper-item {
+	-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+	-webkit-transition: all 0.2s ease-in 0s;
+	-o-transition: all 0.2s ease-in 0s;
+	transition: all 0.2s ease-in 0s;
+}
+
+/* ====================================== */
 .tower-swiper {
 	height: 420rpx;
 	position: relative;
@@ -3779,6 +3820,9 @@ scroll-view.cu-steps .cu-item {
 .text-bold {
 	font-weight: bold;
 }
+.text-bold2 {
+	font-weight: 520;
+}
 .text-center {
 	text-align: center;
 }
@@ -3794,7 +3838,7 @@ scroll-view.cu-steps .cu-item {
 .text-red,
 .line-red,
 .lines-red {
-	color: #e54d42;
+	color: #FF0000;
 }
 .text-orange,
 .line-orange,

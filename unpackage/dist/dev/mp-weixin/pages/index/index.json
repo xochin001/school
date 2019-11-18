@@ -1,7 +1,9 @@
 {
-  "navigationBarTitleText": "uni-app",
+  "navigationBarTitleText": "广州白云工商技师学院",
   "usingComponents": {
     "headers": "/pages/index/header",
-    "title-info": "/pages/index/titleinfo"
+    "title-info": "/pages/index/titleinfo",
+    "swper-banner": "/pages/component/swper-banner",
+    "skele-ton": "/components/tui-skeleton/tui-skeleton"
   }
 }

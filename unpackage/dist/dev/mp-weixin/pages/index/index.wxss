@@ -24,70 +24,21 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.content {
+.page.data-v-86a46e26 {
+  height: 100vh;
+}
+.content.data-v-86a46e26 {
   position: absolute;
   top: 400rpx;
 }
-.banner-content {
+.banner-content.data-v-86a46e26 {
   height: 720rpx;
   width: 100vw;
   background: #F7F7F7;
 }
-.images {
-  width: 606rpx;
-  height: 440rpx;
-  overflow: hidden;
-}
-.infomation {
-  height: 34%;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.menu-title {
-  height: 90rpx;
-  -webkit-flex-basis: 80%;
-      -ms-flex-preferred-size: 80%;
-          flex-basis: 80%;
-}
-.menu-title .title {
-    margin-left: 42rpx;
-    color: #B01C11;
-}
-.menu-title .sub-title {
-    margin-left: 42rpx;
-    color: #A1A1A1;
-    letter-spacing: 2rpx;
-}
-.go-btn {
-  height: 90rpx;
-  -webkit-flex-basis: 20%;
-      -ms-flex-preferred-size: 20%;
-          flex-basis: 20%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #B01C11;
-  font-size: 38rpx;
-}
-.footer-content {
+.footer-content.data-v-86a46e26 {
   width: 100vw;
-  height: 80rpx;
+  height: 110rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,7 +52,7 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.footer-content .fooimg {
+.footer-content .fooimg.data-v-86a46e26 {
     width: 400rpx;
     height: 44rpx;
 }

@@ -2,7 +2,6 @@
 .navbg{
 	height: 399rpx;
 	width: 100vw;
-	background-image: url("http://q0w0nmycu.bkt.clouddn.com/%E8%83%8C%E6%99%AF@3x.png");
 	background-size: cover;
 	position: absolute;
 }
@@ -28,7 +27,7 @@
 }
 .word-view{
 	position: relative;
-	top:40rpx;
+	top:30rpx;
 	left:592rpx;
 }
 .word-left{
